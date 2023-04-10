@@ -1,0 +1,12 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/TwilioExamples.Api/obj
+/TwilioExamples.Api/bin/Debug/net5.0
+/TwilioExamples.Api/appsettings.Development.json
+/TwilioExamples.Application/bin/Debug/net5.0
+/TwilioExamples.Application/obj
+/TwilioExamples.Presistence/bin/Debug/net5.0
+/TwilioExamples.Presistence/obj
+/.vs/TwilioExamples

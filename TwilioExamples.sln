@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32901.82
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwilioExamples.Api", "TwilioExamples.Api\TwilioExamples.Api.csproj", "{BA6D9873-5DD6-4DEF-8F30-D7EB15A48CCE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwilioExamples.Application", "TwilioExamples.Application\TwilioExamples.Application.csproj", "{955F8C94-7610-4A60-8F62-DC89F0F76874}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwilioExamples.Presistence", "TwilioExamples.Presistence\TwilioExamples.Presistence.csproj", "{2B6FAF55-E4B1-4B53-97C2-0DE4DF36D393}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BA6D9873-5DD6-4DEF-8F30-D7EB15A48CCE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA6D9873-5DD6-4DEF-8F30-D7EB15A48CCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA6D9873-5DD6-4DEF-8F30-D7EB15A48CCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA6D9873-5DD6-4DEF-8F30-D7EB15A48CCE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{955F8C94-7610-4A60-8F62-DC89F0F76874}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{955F8C94-7610-4A60-8F62-DC89F0F76874}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{955F8C94-7610-4A60-8F62-DC89F0F76874}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{955F8C94-7610-4A60-8F62-DC89F0F76874}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B6FAF55-E4B1-4B53-97C2-0DE4DF36D393}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B6FAF55-E4B1-4B53-97C2-0DE4DF36D393}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B6FAF55-E4B1-4B53-97C2-0DE4DF36D393}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B6FAF55-E4B1-4B53-97C2-0DE4DF36D393}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2B2CBB2B-E1DA-4005-A7A0-CA5755228F22}
+	EndGlobalSection
+EndGlobal
