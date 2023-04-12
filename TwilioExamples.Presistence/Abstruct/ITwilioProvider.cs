@@ -10,8 +10,8 @@ namespace TwilioExamples.Presistence.Abstruct
 {
     public interface ITwilioProvider
     {
-        Task<MessageResource> SendSms(string body, string to, string from = null);
-        Task<MessageResource> SendSms(string body, string to, DateTime sendAt, string from = null);
+        Task<MessageResource> SendSms(string body, string to, bool isWhatsApp = false, string from = null);
+        Task<MessageResource> SendSms(string body, string to, DateTime sendAt, bool isWhatsApp = false, string from = null);
         Task<bool?> GetVerificationStatus(string sid);
         Task<VerificationResource> SendVerification(string to, string channel);
         Task<bool?> CheckVerification(string to, string code);

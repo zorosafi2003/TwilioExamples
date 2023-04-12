@@ -25,11 +25,24 @@ namespace TwilioExamples.Presistence.Concrete
             accountSid = _configuration["TwilioConfig:AccountSid"].ToString();
             authToken = _configuration["TwilioConfig:AuthToken"].ToString();
         }
-        public async Task<MessageResource> SendSms(string body, string to, string from = null)
+        public async Task<MessageResource> SendSms(string body, string to, bool isWhatsApp = false, string from = null)
         {
             if (string.IsNullOrEmpty(from))
             {
-                from = _configuration["TwilioConfig:Sms:From"].ToString();
+                if (isWhatsApp == false)
+                {
+                    from = _configuration["TwilioConfig:Sms:From"].ToString();
+                }
+                else
+                {
+                    from = _configuration["TwilioConfig:WhatsApp:From"].ToString();
+                }
+            }
+
+            if (isWhatsApp == true)
+            {
+                from = from.Contains("whatsapp:") == true ? from : $"whatsapp:{from}";
+                to = to.Contains("whatsapp:") == true ? to : $"whatsapp:{to}";
             }
 
             TwilioClient.Init(accountSid, authToken);
@@ -45,13 +58,26 @@ namespace TwilioExamples.Presistence.Concrete
             return message;
         }
 
-        public async Task<MessageResource> SendSms(string body, string to, DateTime sendAt , string from = null)
+        public async Task<MessageResource> SendSms(string body, string to, DateTime sendAt, bool isWhatsApp = false, string from = null)
         {
             var messagingServiceSid = _configuration["TwilioConfig:MessagingServiceSid"].ToString();
 
             if (string.IsNullOrEmpty(from))
             {
-                from = _configuration["TwilioConfig:Sms:From"].ToString();
+                if (isWhatsApp == false)
+                {
+                    from = _configuration["TwilioConfig:Sms:From"].ToString();
+                }
+                else
+                {
+                    from = _configuration["TwilioConfig:WhatsApp:From"].ToString();
+                }
+            }
+
+            if (isWhatsApp == true)
+            {
+                from = from.Contains("whatsapp:") == true ? from : $"whatsapp:{from}";
+                to = to.Contains("whatsapp:") == true ? to : $"whatsapp:{to}";
             }
 
             TwilioClient.Init(accountSid, authToken);
@@ -76,7 +102,7 @@ namespace TwilioExamples.Presistence.Concrete
 
             TwilioClient.Init(accountSid, authToken);
 
-            var verificationResource = await VerificationResource.FetchAsync(pathServiceSid: verificationServiceSid,pathSid:sid);
+            var verificationResource = await VerificationResource.FetchAsync(pathServiceSid: verificationServiceSid, pathSid: sid);
 
             if (verificationResource.Status == "approved")
             {

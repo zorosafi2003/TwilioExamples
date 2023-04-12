@@ -33,6 +33,7 @@ namespace TwilioExamples.Api
             services.AddHttpContextAccessor();
 
             services.AddScoped<ITwilioProvider, TwilioProvider>();
+            services.AddScoped<ITwilioHelperProvider, TwilioHelperProvider>();
 
             services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly( typeof(SendSmsCommand).GetTypeInfo().Assembly));
 
